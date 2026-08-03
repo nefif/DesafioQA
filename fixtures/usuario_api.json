@@ -1,0 +1,20 @@
+{
+  "novaContaApi": {
+    "name": "Usuario API Teste",
+    "password": "SenhaApi123",
+    "title": "Mr",
+    "birth_date": "10",
+    "birth_month": "5",
+    "birth_year": "1995",
+    "firstname": "Usuario",
+    "lastname": "API",
+    "company": "QA Challenge",
+    "address1": "Rua de Teste, 123",
+    "address2": "",
+    "country": "Brazil",
+    "zipcode": "60000000",
+    "state": "Ceara",
+    "city": "Fortaleza",
+    "mobile_number": "85999999999"
+  }
+}
