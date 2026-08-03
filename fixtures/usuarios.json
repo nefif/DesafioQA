@@ -1,0 +1,22 @@
+{
+  "usuarioValido": {
+    "nome": "Teste QA",
+    "email": "testeqanf@teste.com",
+    "senha": "123456789"
+  },
+  "novoUsuario": {
+    "nome": "Novo Usuario",
+    "senha": "SenhaSegura123",
+    "dia": "10",
+    "mes": "5",
+    "ano": "1995",
+    "primeiroNome": "Novo",
+    "ultimoNome": "Usuario",
+    "endereco": "Rua de Teste, 123",
+    "pais": "Brazil",
+    "estado": "Ceara",
+    "cidade": "Fortaleza",
+    "cep": "60000000",
+    "telefone": "85999999999"
+  }
+}

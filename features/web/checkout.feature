@@ -9,7 +9,7 @@ Funcionalidade: Checkout de compra
   @smoke @regression @W06
   Cenário: Fluxo completo de checkout end-to-end
     Dado que estou autenticado na aplicação
-    E adiciono um produto ao carrinho
+    E eu adiciono um produto ao carrinho
     Quando eu prossigo para o checkout
     E confirmo o pedido
     Então o pedido deve ser confirmado com sucesso
