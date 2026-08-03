@@ -15,8 +15,7 @@ class HomePage {
   }
 
   async selectCategory(category, subcategory) {
-    // Menu de categorias é um acordeon: expande a categoria e clica na subcategoria
-    await this.page.locator(`.panel-title a:has-text("${category}")`).click();
+    await this.page.locator(`//*[@id="accordian"]/div[1]/div[1]/h4/a`).click();
     await this.page.locator(`a:has-text("${subcategory}")`).first().click();
   }
 }

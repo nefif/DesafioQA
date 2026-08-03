@@ -15,5 +15,5 @@ Funcionalidade: Busca e navegação de produtos
   @regression @W09
   Cenário: Navegação por categoria
     Dado que estou na página inicial
-    Quando eu seleciono a categoria "Women" e a subcategoria "Dress"
+    Quando eu seleciono a categoria "WOMEN" e a subcategoria "Dress"
     Então os produtos listados devem pertencer à categoria selecionada

@@ -27,8 +27,6 @@ class ProductsPage {
   async addFirstProductToCart() {
     await this.productItems.first().hover();
     await this.addToCartButtons.first().click();
-    // Espera de verdade o modal de confirmação aparecer (garante que o AJAX
-    // de adicionar ao carrinho já terminou antes de prosseguir)
     await this.continueShoppingButton.waitFor({ state: 'visible' });
     await this.continueShoppingButton.click();
   }
