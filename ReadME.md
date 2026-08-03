@@ -164,7 +164,7 @@ O relatório HTML é gerado em `reports/playwright-report/index.html`.
 ### Rodar tudo
 
 ```bash
-npm run test:web && npm run test:api
+npm run test:all
 ```
 
 ---

@@ -10,8 +10,12 @@ class CustomWorld extends World {
   }
 
   async openBrowser() {
-    this.browser = await chromium.launch({ headless: true });
-    this.context = await this.browser.newContext();
+    this.browser = await chromium.launch({
+      headless: false,
+      slowMo: 250,
+      args: ['--start-maximized']
+    });
+    this.context = await this.browser.newContext({ viewport: null });
     this.page = await this.context.newPage();
   }
 

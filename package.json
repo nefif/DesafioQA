@@ -7,7 +7,8 @@
     "test:web": "cucumber-js",
     "test:web:smoke": "cucumber-js --tags @smoke",
     "test:web:regression": "cucumber-js --tags @regression",
-    "test:api": "playwright test"
+    "test:api": "playwright test",
+    "test:all": "playwright test && cucumber-js"
   },
   "dependencies": {
     "@playwright/test": "^1.47.0",
