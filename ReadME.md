@@ -235,6 +235,12 @@ Sempre que um cenário **Web** falha, um screenshot da tela no momento da falha 
 
 ---
 
+## Vídeo da execução dos Testes
+
+[Cique aqui para ver o vídeo da execução](https://drive.google.com/file/d/1H6oQbLqBiZY3ARmVR8azjcQMH4pr2PdZ/view?usp=sharing)
+
+---
+
 ## Decisões técnicas e suposições
 
 - **BASE_URL centralizada** em `support/config.js`, com override via variável de ambiente `BASE_URL`, para facilitar trocar de ambiente sem alterar código.
