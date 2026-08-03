@@ -1,0 +1,16 @@
+{
+  "name": "qa-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Desafio QA",
+  "scripts": {
+    "test:web": "cucumber-js",
+    "test:web:smoke": "cucumber-js --tags @smoke",
+    "test:web:regression": "cucumber-js --tags @regression"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.47.0",
+    "playwright": "^1.47.0"
+  }
+}
