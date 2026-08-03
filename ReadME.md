@@ -49,7 +49,7 @@ A desvantagem é que o Playwright não roda nativamente *dentro* do browser como
 
 ```bash
 # 1. Clonar o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/nefif/DesafioQA.git
 cd DesafioQA
 
 # 2. Instalar as dependências
