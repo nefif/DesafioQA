@@ -49,7 +49,7 @@ A desvantagem é que o Playwright não roda nativamente *dentro* do browser como
 
 ```bash
 # 1. Clonar o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/nefif/DesafioQA.git
 cd DesafioQA
 
 # 2. Instalar as dependências
@@ -69,20 +69,20 @@ Por padrão, sem nenhuma configuração adicional, o projeto já aponta para `ht
 ```
 DesafioQA/
 ├── features/
-│   └── web/                    # Cenários BDD (Gherkin)
-│       ├── cadastro.feature
-│       ├── login.feature
-│       ├── busca_produto.feature
-│       ├── carrinho.feature
-│       └── checkout.feature
-│
-├── step_definitions/            # Implementação dos steps (Web)
-│   ├── common.steps.js
-│   ├── cadastro.steps.js
-│   ├── login.steps.js
-│   ├── busca_produto.steps.js
-│   ├── carrinho.steps.js
-│   └── checkout.steps.js
+│   ├── web/                     # Cenários BDD (Gherkin)
+│   │   ├── cadastro.feature
+│   │   ├── login.feature
+│   │   ├── busca_produto.feature
+│   │   ├── carrinho.feature
+│   │   └── checkout.feature
+│   │
+│   └── step_definitions/        # Implementação dos steps (Web)
+│       ├── common_steps.js
+│       ├── cadastro_steps.js
+│       ├── login_steps.js
+│       ├── busca_produto.steps.js
+│       ├── carrinho_steps.js
+│       └── checkout_steps.js
 │
 ├── pages/                       # Page Objects (Web)
 │   ├── HomePage.js
@@ -115,7 +115,6 @@ DesafioQA/
 ├── cucumber.js                  # Configuração do Cucumber (camada Web)
 ├── playwright.config.js         # Configuração do Playwright Test (camada API)
 ├── package.json
-├── .env.example
 ├── .gitignore
 └── README.md
 ```
@@ -166,6 +165,31 @@ O relatório HTML é gerado em `reports/playwright-report/index.html`.
 ```bash
 npm run test:all
 ```
+
+---
+
+### Ver o navegador durante a execução (modo headed)
+ 
+Por padrão, os testes Web rodam em modo **headless** (sem abrir o navegador visualmente), o que é mais rápido e é o recomendado para rodar a suíte completa ou em CI.
+ 
+Para acompanhar visualmente a automação rodando, abra `support/world.js` e altere:
+ 
+```js
+this.browser = await chromium.launch({ headless: true });
+```
+ 
+para:
+ 
+```js
+this.browser = await chromium.launch({
+  headless: false,
+  slowMo: 250,             // opcional: desacelera as ações para acompanhar melhor
+  args: ['--start-maximized']  // opcional: abre a janela já maximizada
+});
+this.context = await this.browser.newContext({ viewport: null }); // necessário junto com --start-maximized
+```
+ 
+**Lembre-se de voltar para `headless: true`** antes de rodar a suíte completa ou gerar as evidências finais — modo visível deixa a execução mais lenta e não funciona em ambientes sem interface gráfica (ex: pipelines de CI).
 
 ---
 
