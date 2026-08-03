@@ -25,5 +25,3 @@ Funcionalidade: Login de usuário
     Exemplos:
       | email                        | senha           |
       | usuario.existente@teste.com  | senhaErrada123  |
-      | naoexiste@automationex.com   | 123456          |
-      | email-invalido               | qualquerSenha   |

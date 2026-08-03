@@ -1,8 +1,8 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { LoginPage } = require('../pages/LoginPage');
-const usuarios = require('../fixtures/usuarios.json');
+const { HomePage } = require('../../pages/HomePage');
+const { LoginPage } = require('../../pages/LoginPage');
+const usuarios = require('../../fixtures/usuarios.json');
 
 Given('que estou na página de login', async function () {
   this.homePage = new HomePage(this.page);

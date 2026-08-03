@@ -1,9 +1,11 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { LoginPage } = require('../pages/LoginPage');
-const { CheckoutPage } = require('../pages/CheckoutPage');
-const usuarios = require('../fixtures/usuarios.json');
+const { HomePage } = require('../../pages/HomePage');
+const { LoginPage } = require('../../pages/LoginPage');
+const { CheckoutPage } = require('../../pages/CheckoutPage');
+const usuarios = require('../../fixtures/usuarios.json');
+const pagamento = require('../../fixtures/pagamento.json');
+
 
 Given('que estou autenticado na aplicação', async function () {
   this.homePage = new HomePage(this.page);
@@ -14,16 +16,19 @@ Given('que estou autenticado na aplicação', async function () {
   await this.loginPage.fillCredentials(email, senha);
   await this.loginPage.submit();
 });
-
+ 
 When('eu prossigo para o checkout', async function () {
+  await this.carrinhoPage.open();
   await this.carrinhoPage.proceedToCheckout();
   this.checkoutPage = new CheckoutPage(this.page);
 });
-
+ 
 When('eu confirmo o pedido', async function () {
   await this.checkoutPage.placeOrder();
+  await this.checkoutPage.fillPaymentDetails(pagamento.cartaoTeste);
+  await this.checkoutPage.confirmPayment();
 });
-
+ 
 Then('o pedido deve ser confirmado com sucesso', async function () {
   expect(await this.checkoutPage.isOrderConfirmed()).toBeTruthy();
 });

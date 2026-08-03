@@ -15,7 +15,6 @@ class CadastroPage {
     this.firstNameInput = page.locator('input[data-qa="first_name"]');
     this.lastNameInput = page.locator('input[data-qa="last_name"]');
     this.addressInput = page.locator('input[data-qa="address"]');
-    this.countrySelect = page.locator('select[data-qa="country"]');
     this.stateInput = page.locator('input[data-qa="state"]');
     this.cityInput = page.locator('input[data-qa="city"]');
     this.zipcodeInput = page.locator('input[data-qa="zipcode"]');
@@ -41,7 +40,6 @@ class CadastroPage {
     await this.firstNameInput.fill(dados.primeiroNome);
     await this.lastNameInput.fill(dados.ultimoNome);
     await this.addressInput.fill(dados.endereco);
-    await this.countrySelect.selectOption(dados.pais);
     await this.stateInput.fill(dados.estado);
     await this.cityInput.fill(dados.cidade);
     await this.zipcodeInput.fill(dados.cep);

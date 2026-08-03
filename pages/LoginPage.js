@@ -4,7 +4,7 @@ class LoginPage {
     this.emailInput = page.locator('input[data-qa="login-email"]');
     this.passwordInput = page.locator('input[data-qa="login-password"]');
     this.loginButton = page.locator('button[data-qa="login-button"]');
-    this.errorMessage = page.locator('p:has-text("incorrect")');
+    this.errorMessage = page.locator('//*[@id="form"]/div/div/div[1]/div/form/p');
     this.loggedInIndicator = page.locator('a:has-text("Logged in as")');
   }
 

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://automationexercise.com/products';
+const { BASE_URL } = require('../support/config');
 
 class ProductsPage {
   constructor(page) {
@@ -12,7 +12,7 @@ class ProductsPage {
   }
 
   async open() {
-    await this.page.goto(BASE_URL);
+    await this.page.goto(`${BASE_URL}/products`);
   }
 
   async searchProduct(termo) {
@@ -27,9 +27,10 @@ class ProductsPage {
   async addFirstProductToCart() {
     await this.productItems.first().hover();
     await this.addToCartButtons.first().click();
-    if (await this.continueShoppingButton.isVisible()) {
-      await this.continueShoppingButton.click();
-    }
+    // Espera de verdade o modal de confirmação aparecer (garante que o AJAX
+    // de adicionar ao carrinho já terminou antes de prosseguir)
+    await this.continueShoppingButton.waitFor({ state: 'visible' });
+    await this.continueShoppingButton.click();
   }
 }
 

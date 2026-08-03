@@ -1,6 +1,6 @@
 const { Given, When } = require('@cucumber/cucumber');
-const { ProductsPage } = require('../pages/ProductsPage');
-const { CarrinhoPage } = require('../pages/CarrinhoPage');
+const { ProductsPage } = require('../../pages/ProductPage');
+const { CarrinhoPage } = require('../../pages/CarrinhoPage');
 
 // Reutilizado por busca_produto.feature e carrinho.feature
 Given('que estou na página de produtos', async function () {

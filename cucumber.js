@@ -1,7 +1,7 @@
 module.exports = {
   default: {
     paths: ['features/web/**/*.feature'],
-    require: ['support/**/*.js', 'step_definitions/**/*.js'],
+    require: ['support', 'features/step_definitions'],
     format: [
       'summary',
       'progress-bar',

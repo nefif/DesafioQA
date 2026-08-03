@@ -1,7 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { ProductsPage } = require('../pages/ProductsPage');
-const { CarrinhoPage } = require('../pages/CarrinhoPage');
+const { ProductsPage } = require('../../pages/ProductPage');
+const { CarrinhoPage } = require('../../pages/CarrinhoPage');
 
 When('acesso a página do carrinho', async function () {
   await this.carrinhoPage.open();

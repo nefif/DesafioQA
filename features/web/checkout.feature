@@ -11,5 +11,5 @@ Funcionalidade: Checkout de compra
     Dado que estou autenticado na aplicação
     E eu adiciono um produto ao carrinho
     Quando eu prossigo para o checkout
-    E confirmo o pedido
+    E eu confirmo o pedido
     Então o pedido deve ser confirmado com sucesso

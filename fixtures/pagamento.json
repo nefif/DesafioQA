@@ -1,0 +1,9 @@
+{
+  "cartaoTeste": {
+    "nomeCartao": "Usuario Teste",
+    "numeroCartao": "4242424242424242",
+    "cvc": "123",
+    "mesValidade": "12",
+    "anoValidade": "2030"
+  }
+}

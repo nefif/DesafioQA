@@ -1,4 +1,4 @@
-const BASE_URL = 'https://automationexercise.com';
+const { BASE_URL } = require('../support/config');
 
 class HomePage {
   constructor(page) {

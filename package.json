@@ -9,8 +9,10 @@
     "test:web:regression": "cucumber-js --tags @regression"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^10.9.0",
     "@playwright/test": "^1.47.0",
     "playwright": "^1.47.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.0"
   }
 }

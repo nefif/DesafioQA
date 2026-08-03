@@ -1,7 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { ProductsPage } = require('../pages/ProductsPage');
+const { HomePage } = require('../../pages/HomePage');
+const { ProductsPage } = require('../../pages/ProductPage');
 
 When('eu busco pelo termo {string}', async function (termo) {
   await this.productsPage.searchProduct(termo);

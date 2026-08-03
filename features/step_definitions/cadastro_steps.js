@@ -1,8 +1,8 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
-const { CadastroPage } = require('../pages/CadastroPage');
-const usuarios = require('../fixtures/usuarios.json');
+const { HomePage } = require('../../pages/HomePage');
+const { CadastroPage } = require('../../pages/CadastroPage');
+const usuarios = require('../../fixtures/usuarios.json');
 
 Given('que estou na página inicial do Automation Exercise', async function () {
   this.homePage = new HomePage(this.page);

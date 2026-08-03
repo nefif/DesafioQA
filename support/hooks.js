@@ -1,6 +1,10 @@
-const { Before, After, Status } = require('@cucumber/cucumber');
+const { Before, After, Status, setDefaultTimeout } = require('@cucumber/cucumber');
 const fs = require('fs');
 const path = require('path');
+
+// O timeout padrão do Cucumber (5000ms) é curto para steps que navegam
+// de verdade no browser. Aumentamos para 30s.
+setDefaultTimeout(30 * 1000);
 
 Before(async function () {
   await this.openBrowser();

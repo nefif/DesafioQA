@@ -13,9 +13,8 @@
     "primeiroNome": "Novo",
     "ultimoNome": "Usuario",
     "endereco": "Rua de Teste, 123",
-    "pais": "Brazil",
-    "estado": "Ceara",
-    "cidade": "Fortaleza",
+    "estado": "Teste",
+    "cidade": "TesteCidade",
     "cep": "60000000",
     "telefone": "85999999999"
   }
