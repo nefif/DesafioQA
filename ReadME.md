@@ -115,7 +115,6 @@ DesafioQA/
 ├── cucumber.js                  # Configuração do Cucumber (camada Web)
 ├── playwright.config.js         # Configuração do Playwright Test (camada API)
 ├── package.json
-├── .env.example
 ├── .gitignore
 └── README.md
 ```
